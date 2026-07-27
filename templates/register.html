@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/register.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Student Registration</h1>
+
+    <form action="/register" method="POST">
+
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="text" name="department" placeholder="Department" required>
+
+        <input type="number" step="0.01" name="cgpa" placeholder="CGPA" required>
+
+        <input type="number" step="0.01" name="tenth" placeholder="10th Percentage" required>
+
+        <input type="number" step="0.01" name="twelfth" placeholder="12th Percentage" required>
+
+        <input type="number" name="aptitude" placeholder="Aptitude Marks" required>
+
+        <input type="number" name="programming" placeholder="Programming Skill" required>
+
+        <input type="number" name="communication" placeholder="Communication Skill" required>
+
+        <input type="number" name="projects" placeholder="Projects Completed" required>
+
+        <select name="internship">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select>
+
+        <input type="number" name="backlogs" placeholder="Backlogs" required>
+
+        <input type="number" name="certifications"
+               placeholder="Certifications" required>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <p>
+        Already have an account?
+        <a href="/login">Login</a>
+    </p>
+
+</div>
+
+</body>
+</html>

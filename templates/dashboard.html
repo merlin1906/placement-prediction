@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    
+</head>
+
+<body>
+
+<div class="sidebar">
+
+    <h2>Placement AI</h2>
+
+    <a href="/dashboard">🏠 Dashboard</a>
+
+    <a href="/prediction">🤖 Prediction</a>
+    
+    <a href="/history">📊 Prediction History</a>
+
+    <a href="/profile">👤 Profile</a>
+
+    <a href="/logout">🚪 Logout</a>
+
+</div>
+
+<div class="main">
+
+    <div class="header">
+
+       <h1>Welcome {{ student.name }}!!</h1>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h2>CGPA</h2>
+
+          <p>{{ student.cgpa }}</p>
+        </div>
+
+        <div class="card">
+
+            <h2>Projects</h2>
+
+            <p>{{ student.projects }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Internships</h2>
+
+            <p>{{ student.internship }}</p>
+
+        </div>
+
+        <div class="card">
+
+            <h2>Prediction</h2>
+
+            <p>{{ student.prediction }}</p>
+
+        </div>
+
+    </div>
+
+    <div class="table-box">
+
+        <h2>Student Details</h2>
+
+        <table>
+
+            <tr>
+    <th>Name</th>
+    <td>{{ student.name }}</td>
+</tr>
+
+<tr>
+    <th>Department</th>
+    <td>{{ student.department }}</td>
+</tr>
+
+<tr>
+    <th>Email</th>
+    <td>{{ student.email }}</td>
+</tr>
+
+<tr>
+    <th>CGPA</th>
+     <td>{{ student.cgpa }}</td>
+</tr>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
